@@ -1,0 +1,10 @@
+<div class="card-container">
+    <p class="pokemon-info">
+        {{pokemon().name}}
+        <span>{{pokemon().number}}</span>
+    </p>
+    <img [ngSrc]="pokemon().img" width="250" height="250" [alt]="pokemon().alt"/>
+    <div class="pokemon-type">
+        <span>{{pokemon().type}}</span>
+    </div>
+</div>

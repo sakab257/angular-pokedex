@@ -1,0 +1,10 @@
+<div class="input-wrapper">
+    <input 
+        type="text" 
+        placeholder="Rechercher..." 
+        autocomplete="off" 
+        [ngModel]="search()"
+        (ngModelChange)="updateSearch($event)"
+    />
+    <span><img ngSrc="assets/search.svg" width="25" height="25" alt="Image Loupe Rechercher" /></span>
+</div>
