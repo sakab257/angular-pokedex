@@ -9,8 +9,5 @@ import { SearchBar } from './search-bar/search-bar';
   styleUrl: './header.css',
 })
 export class Header {
-  clicked = output<void>();
-  onClick() {
-    this.clicked.emit();
-  }
+  searchText = "";
 }

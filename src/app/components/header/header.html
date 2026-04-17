@@ -1,8 +1,9 @@
 <header>
     <img ngSrc="logo/pokemon.png" width="150" height="100" alt="Image Logo Pokémon" />
-    <app-search-bar />
+    <app-search-bar [(search)]="searchText" />
     <div class="btn-wrapper">
-        <button (click)="onClick()">Bouton 1</button>
+        <button>Bouton 1</button>
         <button>Bouton 2</button>
     </div>
 </header>
+Texte : {{searchText}}

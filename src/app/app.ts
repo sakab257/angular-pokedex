@@ -10,11 +10,6 @@ import { PokemonCardModel } from './models/pokemon-card';
   styleUrl: './app.css'
 })
 export class App {
-  count = signal(0);
-  
-  incrementCount(){
-    this.count.update(val => val + 1);
-  }
 
   charmander = new PokemonCardModel();
   charmeleon = new PokemonCardModel();

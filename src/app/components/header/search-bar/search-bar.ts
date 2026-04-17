@@ -1,4 +1,4 @@
-import { Component, input, output } from '@angular/core';
+import { Component, input, model, output } from '@angular/core';
 import { NgOptimizedImage } from "@angular/common";
 import { FormsModule } from '@angular/forms';
 
@@ -9,9 +9,9 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './search-bar.css',
 })
 export class SearchBar {
-  search = input("");
-  searchChange = output<string>();
-  updateSearch(searchText:string){
-    this.searchChange.emit(searchText);
+  search = model("");
+  updateSearch(searchText: string){
+    this.search.set(searchText);
   }
+
 }
