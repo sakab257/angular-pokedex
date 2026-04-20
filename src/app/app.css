@@ -3,5 +3,6 @@ section {
     height: calc(100vh - 100px);
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 24px;
 }

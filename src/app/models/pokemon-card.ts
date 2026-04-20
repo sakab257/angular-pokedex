@@ -1,7 +1,7 @@
-export class PokemonCardModel {
-    name = "Salamèche";
-    number = "N°0004";
-    img = "sprites/charmander.png";
-    alt = "Image de Salamèche";
-    type = "Feu";
+export interface PokemonCardModel {
+    name: string;
+    number: string;
+    img: string;
+    alt: string;
+    type: string;
 }

@@ -1,4 +1,4 @@
-<app-header (searchChange)="searchText.set($event)"/>
+<app-header (searchChange)="onSearch($event)"/>
 <section>
   @for (pokemon of filteredPokemons(); track pokemon.number){
     <app-pokemon-card [pokemon]="pokemon" />
