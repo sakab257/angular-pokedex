@@ -10,4 +10,5 @@ import { SearchBar } from './search-bar/search-bar';
 })
 export class Header {
   searchText = "";
+  searchChange = output<string>();
 }

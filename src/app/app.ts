@@ -1,7 +1,7 @@
-import { Component, signal } from '@angular/core';
+import { Component, computed, signal } from '@angular/core';
 import { Header } from "./components/header/header";
-import { PokemonCard } from "./components/pokemon-card/pokemon-card";
 import { PokemonCardModel } from './models/pokemon-card';
+import { PokemonCard } from './components/pokemon-card/pokemon-card';
 
 @Component({
   selector: 'app-root',
@@ -14,6 +14,14 @@ export class App {
   charmander = new PokemonCardModel();
   charmeleon = new PokemonCardModel();
   charizard = new PokemonCardModel();
+
+  searchText = signal("");
+  selectedPokemons = signal<PokemonCardModel[]>([this.charmander,this.charmeleon,this.charizard]);
+  filteredPokemons = computed(() => (
+    this.selectedPokemons().filter((pokemon) => (
+      pokemon.name.toLocaleLowerCase().includes(this.searchText().toLocaleLowerCase())
+    ))
+  ))
 
   constructor() {
     this.charmander.name = "Salamèche";
@@ -33,5 +41,6 @@ export class App {
     this.charizard.img = "sprites/charizard.png";
     this.charizard.alt = "Image de Dracaufeu";
     this.charizard.type = "Feu";
+    
   }
 }

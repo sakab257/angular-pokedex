@@ -13,5 +13,4 @@ export class SearchBar {
   updateSearch(searchText: string){
     this.search.set(searchText);
   }
-
 }
